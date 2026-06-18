@@ -83,6 +83,19 @@ paleo.map <- function(
       ticks.colour = frame_color
     )
   ) +
+  ggplot2::scale_colour_stepsn(
+    colours = fill_palette,
+    breaks = col_labels,
+    limits = c(min_value, max_value),
+    labels = col_labels,
+    guide = ggplot2::guide_colorbar(
+      title.position = "top",
+      barwidth = 12,
+      barheight = 1,
+      frame.colour = frame_color,
+      ticks.colour = frame_color
+    )
+  ) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
       legend.position = legend_position,
