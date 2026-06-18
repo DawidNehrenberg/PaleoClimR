@@ -38,7 +38,8 @@ paleo.map <- function(
     legend_position = "bottom",
     axis_color = "black",
     legend_text_color = "black",
-    col_labels = NULL
+    col_labels = NULL,
+    bar_width = 12
 ) {
 
   # Safety checks
@@ -77,7 +78,7 @@ paleo.map <- function(
     labels = col_labels,
     guide = ggplot2::guide_colorbar(
       title.position = "top",
-      barwidth = 12,
+      barwidth = bar_width,
       barheight = 1,
       frame.colour = frame_color,
       ticks.colour = frame_color
@@ -90,7 +91,7 @@ paleo.map <- function(
     labels = col_labels,
     guide = ggplot2::guide_colorbar(
       title.position = "top",
-      barwidth = 12,
+      barwidth = bar_width,
       barheight = 1,
       frame.colour = frame_color,
       ticks.colour = frame_color

@@ -37,7 +37,8 @@ cGENIE.map <- function(var, experiment,
                        darkmode = FALSE,
                        custom.bg = NULL,
                        custom.fg = NULL,
-                       col.labels = NULL) {
+                       col.labels = NULL,
+                       bar_width = 12) {
 
   # Set default values based on variable
   unit.factor <- if(is.null(unit.factor)) switch(var,
@@ -147,7 +148,8 @@ cGENIE.map <- function(var, experiment,
     fill_continents = !is.null(continents_proj),
     col_labels = col.labels,
     axis_color = custom.fg,
-    legend_text_color = custom.fg
+    legend_text_color = custom.fg,
+    bar_width = bar_width
   )
 
   # Apply darkmode background
